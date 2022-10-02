@@ -14,5 +14,19 @@
         "npm --prefix \"$RESOURCE_DIR\" run build"
       ]
     }
-  ]
+  ],
+  "hosting": {
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "firebaseApp"
+      }
+    ]
+  },
+  "emulators": {
+    "hosting": {
+      "port": "3008"
+    }
+  }
 }
